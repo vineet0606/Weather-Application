@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="s.css"> -->
+     <link rel="shortcut icon" href="assests/weather-icon-png-11073.png" type="image/x-icon">
+</head>
+<body>
+        <div class=" main_container">
+            <div class="wrapper">
+                    
+                <h1 class="heading">WEATHER APP</h1>
+                <!-- Tab container -->
+                <div class="tab-container">
+                    <p class="tab"   data-YourWeather>Your Weather</p>
+                    <p class="tab"   data-SearchWeather>Search Weather</p>
+                </div>
+
+                <div class="weather_container">  <!--  from all of these only one tab  will be visible   -->
+                        <!-- Grant Location Container -->
+                                <div class="grant-location">
+                                        <img src="./assests/location image.png" loading="lazy" height="80" width="80" alt="" class="location-img">
+                                        <h1 grant-location-heading>Grant Location Access</h1>
+                                        <p grant-desc>Allow Access To Get Weather Information</p>
+                                        <button grant-btn  >Grant Access</button>
+                                </div>
+
+                        <!-- search form-->
+                        <form data-search-form class="form_container" > 
+                            <input  placeholder="Search for City.." data-search-city>
+                            <button   type="submit" title="." search-btn>
+                                    <img src="./assests/search.png" alt="">
+                            </button>
+                        </form>
+
+                        <!-- loading screen -->
+                        <div loading-screen class="loading-screen"> 
+                            <img src="./assests/loading.gif" height="140" width="140" title="img" >
+                            <p loadinf_par> Loading...</p>
+                        </div>
+                        <!-- user Weaher info  container-->
+                        <div class="user-weather-info">
+                                <!--city name  -->
+                                <div city-info>
+                                    <p city-name> </p>
+                                    <img  counrty_icon alt="">
+                                </div>
+                                <!-- Weather description -->
+                                <p weather-desc></p>
+
+                                <!-- weather condition image -->
+                                <img weather-condition-icon alt="">
+
+                                <!-- Weather temperature  -->
+                                <p weather-temp> </p>
+
+                                <!-- weather parameter contaniner -->
+                                <div weather-parameter-container  >
+                                        <!-- Card1 -->
+                                        <div card>
+                                            <img src="./assests/wind.png" alt="">
+                                            <h1>WINDSPEED</h1>
+                                            <p weather-speed></p>
+                                        </div>
+
+                                        <!-- Card2 -->
+                                        <div card>
+                                            <img src="./assests/humidity.png" alt="">
+                                            <h1>HUMIDITY</h1>
+                                            <p weather-humadity></p>
+                                        </div>
+
+                                        <!-- Card3 -->
+                                        <div card>
+                                            <img src="./assests/cloud.png" alt="">
+                                            <h1>CLOUDS</h1>
+                                            <p weather-cloud></p>
+                                    </div>
+                                </div>
+
+
+
+                        </div>
+                </div>
+                <div class="error_found_image"> 
+                    <img src="./assests/not-found.png" alt="" class="Error_img" height="300px" width="300px">
+                    <p id="x" error_handle_text></p>
+                </div>
+    
+    </div>
+       </div>
+             
+
+   <script src="script.js"></script>    
+</body>
+</html>

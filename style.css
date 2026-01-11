@@ -1,0 +1,345 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ {
+
+    
+}
+.main_container{
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(38, 51, 97, 1) 0%, rgba(65, 143, 222, 1) 79%);
+    font-family: "Merriweather Sans", sans-serif;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+     
+    max-width: 720px;
+}
+.heading {
+    text-align: center;
+    font-weight: 750;
+    font-size: 35px;
+    color: white;
+}
+.tab-container {
+    display: flex;
+    padding: 0 6rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.8rem;
+}
+.tab {
+    /*   flex-grow: 1;  Allow tabs to grow and shrink */
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 750;
+    color: aliceblue;
+    cursor: pointer;
+}
+.tab.current-tab {
+    background-color: rgba(208, 208, 208, 0.645);
+    border: 1px solid rgba(208, 208, 208, 0.645);
+    border-radius: 0.3rem;
+    transition: all 0.5s linear;
+}
+
+.tab.current-tab:hover {
+    background-color: rgba(188, 187, 190, 0.645);
+}
+
+.weather_container {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather_container.active {
+    display: flex;
+}
+
+.grant-location {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.grant-location p {
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.grant-location button {
+    all: unset;
+    /*    border: none;
+                        appearance: none;    both are means comment wala dono and  " all: unset"  */
+    cursor: pointer;
+    color: white;
+    padding: 0.5rem 1.3rem;
+    background-color: #539ad0;
+    border-radius: 0.3rem;
+    transition: all 0.2s linear;
+}
+
+.grant-location button:hover {
+    background: #73b2e1;
+}
+
+.grant-location {
+    display: none;
+}
+
+.grant-location.active {
+    display: flex;
+}
+
+.loading-screen {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading-screen p {
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    padding-left: 0.8rem;
+}
+
+.loading-screen.active {
+    display: flex;
+}
+
+
+[data-search-form] {
+    margin-top: 1.9rem;
+    color: white;
+    position: relative;
+    /* display: none; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.9rem;
+    gap: 0.5rem;
+}
+
+[data-search-form] input{
+    width: 450px;
+    border: none;
+    appearance: none;
+    padding: 0.8rem 0;
+    padding-right: 2rem;
+    padding-left: 0.5rem;
+    text-align: start;
+    font-size: 15px;
+    background-color: rgba(208, 208, 208, 0.645);
+    color: white;
+    font-size: 15px;
+    border-radius: 0.7rem;
+
+}
+
+[data-search-form] input::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+[data-search-city]:focus {
+    outline: none !important;
+    border: 2.5px solid white;
+}
+
+[search-btn] {
+    border-radius: 1.9rem;
+    height: 38px;
+    width: 38px;
+    background-color: #539ad0;
+    border: none;
+    cursor: pointer;
+}
+
+[search-btn] img {
+    height: 22px;
+    width: 22px;
+}
+
+.form_container {
+    display: none;
+}
+
+.form_container.active {
+    display: flex;
+}
+
+.user-weather-info {
+    /* display: flex; */
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-weather-info {
+    display: none;
+}
+
+.user-weather-info.active {
+    display: flex;
+}
+
+[city-info] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+}
+
+[city-info] p {
+    color: white;
+    font-size: 30px;
+    font-family: "Merriweather Sans", sans-serif;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    opacity: 0.9;
+}
+
+[city-info] img {
+    height: 25px;
+    width: 25px;
+}
+
+[weather-desc] {
+    color: white;
+    font-size: 23px;
+    font-family: "Merriweather Sans", sans-serif;
+    padding: 0.7rem 0;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 100 !important;
+    line-height: normal;
+    opacity: 0.9;
+}
+
+[weather-condition-icon] {
+    height: 115px;
+    width: 115px;
+    margin-top: -0.8rem;
+    margin-bottom: -2rem;
+}
+
+[weather-temp] {
+    color: white;
+    font-size: 44px;
+    font-family: "Merriweather Sans", sans-serif;
+    padding: 0.7rem 0;
+    text-align: center;
+    letter-spacing: 0.9px;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+[weather-parameter-container] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+[card] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(177, 176, 176, 0.645);
+    border-radius: 0.4rem;
+    padding: 1rem 1.5rem;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+
+}
+
+[card] img {
+    height: 60px;
+    width: 60px;
+}
+
+[card] h1 {
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 400;
+}
+
+[card] p {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 22px;
+    font-style: oblique;
+}
+
+.error_found_image {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error_found_image img {
+    height: 300px;
+    width: 280px;
+}
+
+.error_found_image p {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 525px) {
+      .wrapper{
+        object-fit: cover;
+
+      }  
+}
+
+
+@media screen and (max-width :750px) {
+    [weather-parameter-container] {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 1.75rem;
+    }
+
+    .tab-container {
+        flex-flow: row;
+        flex-shrink: inherit;
+    }
+
+
+}
